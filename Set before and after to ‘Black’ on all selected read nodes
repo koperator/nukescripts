@@ -1,0 +1,3 @@
+for a in nuke.selectedNodes('Read'):
+    a['before'].setValue('black')
+    a['after'].setValue('black')
