@@ -1,0 +1,4 @@
+for a in nuke.selectedNodes('Write'):
+    a['use_limit'].setValue(1)
+    a['first'].setValue(1)
+    a['last'].setValue(170)
