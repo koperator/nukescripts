@@ -1,0 +1,4 @@
+for a in nuke.allNodes():
+    if 'disable' in a.knobs():
+        if a['disable'].value():
+            nuke.delete(a)
