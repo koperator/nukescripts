@@ -1,0 +1,2 @@
+for a in nuke.allNodes('Read'):
+    a['reload'].execute()
