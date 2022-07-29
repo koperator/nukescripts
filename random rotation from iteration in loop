@@ -1,0 +1,1 @@
+rand(detail("../foreach_count1","iteration",0))*360
