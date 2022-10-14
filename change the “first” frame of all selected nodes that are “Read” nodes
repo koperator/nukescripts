@@ -1,0 +1,3 @@
+for a in nuke.selectedNodes():
+    if a.Class() == 'Read':
+        a['first'].setValue(1018)
