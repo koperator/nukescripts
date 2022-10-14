@@ -1,0 +1,3 @@
+s = nuke.allNodes('Shuffle')
+for i in s:
+    i['label'].setValue("[value in]")
