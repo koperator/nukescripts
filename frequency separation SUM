@@ -1,0 +1,470 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push 0
+Dot {
+ name Dot46
+ selected true
+ xpos -1086
+ ypos 1375
+}
+set N833b4400 [stack 0]
+Group {
+ name MIN27
+ selected true
+ xpos -1136
+ ypos 1745
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -610
+  ypos 331
+ }
+ Dot {
+  name Dot1
+  xpos -576
+  ypos 371
+ }
+set N833b4c00 [stack 0]
+ Blur {
+  size 13
+  name Gausian_Blur
+  selected true
+  xpos -613
+  ypos 453
+  cached true
+ }
+ Dot {
+  name Dot9
+  xpos -579
+  ypos 535
+ }
+ Invert {
+  name Invert1
+  xpos -459
+  ypos 525
+ }
+push $N833b4c00
+ Dot {
+  name Dot10
+  xpos -296
+  ypos 371
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge1
+  xpos -333
+  ypos 531
+ }
+ Grade {
+  blackpoint 1
+  whitepoint 0
+  name MIN
+  xpos -345
+  ypos 618
+ }
+ Output {
+  name Output1
+  label MIN
+  xpos -343
+  ypos 690
+ }
+end_group
+push 0
+push 0
+Dot {
+ name Dot1
+ selected true
+ xpos -845
+ ypos 1353
+}
+set N8336fc00 [stack 0]
+Group {
+ name MIN28
+ selected true
+ xpos -894
+ ypos 1747
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -610
+  ypos 331
+ }
+ Dot {
+  name Dot1
+  xpos -576
+  ypos 371
+ }
+set N8338f800 [stack 0]
+ Blur {
+  size 13
+  name Gausian_Blur
+  selected true
+  xpos -613
+  ypos 453
+  cached true
+ }
+ Dot {
+  name Dot9
+  xpos -579
+  ypos 535
+ }
+ Invert {
+  name Invert1
+  xpos -459
+  ypos 525
+ }
+push $N8338f800
+ Dot {
+  name Dot10
+  xpos -296
+  ypos 371
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge1
+  xpos -333
+  ypos 531
+ }
+ Grade {
+  blackpoint 1
+  whitepoint 0
+  name MIN
+  xpos -345
+  ypos 618
+ }
+ Output {
+  name Output1
+  label MIN
+  xpos -343
+  ypos 690
+ }
+end_group
+push 0
+Dot {
+ name Dot2
+ selected true
+ xpos -518
+ ypos 1374
+}
+set N8336e400 [stack 0]
+Group {
+ name MIN30
+ selected true
+ xpos -515
+ ypos 1725
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -610
+  ypos 331
+ }
+ Dot {
+  name Dot1
+  xpos -576
+  ypos 371
+ }
+set N8339a400 [stack 0]
+ Blur {
+  size 13
+  name Gausian_Blur
+  xpos -613
+  ypos 453
+  cached true
+ }
+ Dot {
+  name Dot9
+  xpos -579
+  ypos 535
+ }
+ Invert {
+  name Invert1
+  xpos -459
+  ypos 525
+ }
+push $N8339a400
+ Dot {
+  name Dot10
+  xpos -296
+  ypos 371
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge1
+  xpos -333
+  ypos 531
+ }
+ Grade {
+  blackpoint 1
+  whitepoint 0
+  name MIN
+  xpos -345
+  ypos 618
+ }
+ Output {
+  name Output1
+  label MIN
+  xpos -343
+  ypos 690
+ }
+end_group
+Merge2 {
+ inputs 3+1
+ operation max
+ name Merge23
+ selected true
+ xpos -268
+ ypos 1846
+}
+push $N8336e400
+Group {
+ name MAX34
+ selected true
+ xpos -660
+ ypos 1728
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 19
+  ypos 331
+ }
+ Dot {
+  name Dot15
+  xpos 53
+  ypos 371
+ }
+set N83387800 [stack 0]
+ Blur {
+  size 13
+  name Gausian_Blur1
+  xpos 18
+  ypos 455
+  cached true
+ }
+ Dot {
+  name Dot13
+  xpos 52
+  ypos 537
+ }
+ Invert {
+  name Invert2
+  xpos 172
+  ypos 527
+ }
+push $N83387800
+ Dot {
+  name Dot14
+  xpos 335
+  ypos 373
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge2
+  xpos 298
+  ypos 533
+ }
+ Grade {
+  blackpoint 1
+  whitepoint 2
+  name MAX1
+  selected true
+  xpos 320
+  ypos 635
+ }
+ Output {
+  name Output1
+  xpos 314
+  ypos 728
+ }
+end_group
+push 0
+push $N833b4400
+Group {
+ name MAX35
+ selected true
+ xpos -1007
+ ypos 1755
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 19
+  ypos 331
+ }
+ Dot {
+  name Dot15
+  xpos 53
+  ypos 371
+ }
+set N8337d000 [stack 0]
+ Blur {
+  size 13
+  name Gausian_Blur1
+  xpos 18
+  ypos 455
+  cached true
+ }
+ Dot {
+  name Dot13
+  xpos 52
+  ypos 537
+ }
+ Invert {
+  name Invert2
+  xpos 172
+  ypos 527
+ }
+push $N8337d000
+ Dot {
+  name Dot14
+  xpos 335
+  ypos 373
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge2
+  xpos 298
+  ypos 533
+ }
+ Grade {
+  blackpoint 1
+  whitepoint 2
+  name MAX1
+  selected true
+  xpos 303
+  ypos 644
+ }
+ Output {
+  name Output1
+  xpos 314
+  ypos 728
+ }
+end_group
+push $N8336fc00
+Group {
+ name MAX36
+ selected true
+ xpos -803
+ ypos 1749
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 19
+  ypos 331
+ }
+ Dot {
+  name Dot15
+  xpos 53
+  ypos 371
+ }
+set N8337b800 [stack 0]
+ Blur {
+  size 13
+  name Gausian_Blur1
+  xpos 18
+  ypos 455
+  cached true
+ }
+ Dot {
+  name Dot13
+  xpos 52
+  ypos 537
+ }
+ Invert {
+  name Invert2
+  xpos 172
+  ypos 527
+ }
+push $N8337b800
+ Dot {
+  name Dot14
+  xpos 335
+  ypos 373
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  name Merge2
+  xpos 298
+  ypos 533
+ }
+ Grade {
+  blackpoint 1
+  whitepoint 2
+  name MAX1
+  selected true
+  xpos 320
+  ypos 635
+ }
+ Output {
+  name Output1
+  xpos 314
+  ypos 728
+ }
+end_group
+Merge2 {
+ inputs 3+1
+ operation max
+ name Merge53
+ selected true
+ xpos -818
+ ypos 1931
+}
+Merge2 {
+ inputs 2
+ operation from
+ name Merge70
+ selected true
+ xpos -736
+ ypos 2060
+}
+Grade {
+ whitepoint 2
+ name Grade1
+ selected true
+ xpos -736
+ ypos 2111
+}
+Grade {
+ add 0.5
+ black_clamp false
+ name Grade113
+ selected true
+ xpos -764
+ ypos 2220
+}
+push 0
+Dot {
+ name Dot34
+ selected true
+ xpos -1446
+ ypos 1397
+}
+Blur {
+ size 13
+ name Gausian_Blur
+ selected true
+ xpos -1531
+ ypos 1738
+ cached true
+}
+MergeExpression {
+ inputs 2
+ expr0 "Ar > .5 ? Br + (2*(Ar-.5)) : Br + 2*Ar -1"
+ expr1 "Ag > .5 ? Bg + (2*(Ag-.5)) : Bg + 2*Ag -1"
+ expr2 "Ab > .5 ? Bb + (2*(Ab-.5)) : Bb + 2*Ab -1"
+ name Linear_Light_Me5
+ label "Equivalent of a Linear Light\nblending mode in Photoshop"
+ selected true
+ xpos -1426
+ ypos 2249
+}
