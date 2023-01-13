@@ -1,0 +1,76 @@
+[14:38] Piotr Rudkowski
+Description:
+a. "Use 16 bits floats" in Render Settings/Save/Multi-Pass Image and Format Row
+b. "Multi-Part EXR" in Render Settings/Redshift/AOV Tab
+c. "bits per channel: 16bits" in Render Settings/Redshift/AOV/Show AOV Manager/Bits Per Channel
+ 
+[ 01 ] +++ v0056 +++
+ 
+a. by default
+b. by default
+c. by default
+ 
+File Size: 192MB
+Render Time: 01:37
+ 
+V:\1436_Link8_Infinity\04_Scenes\Shots\main-sh010\Rendering\3dRender\shot_main-sh010_mod_Modeling_v0056__pru_
+ 
+[ 02 ] +++ v0052 +++
+ 
+a. by default
+b. by default
+c. bits per channel: 16bits
+ 
+File Size: 70,5MB
+Render Time: 01:44
+ 
+V:\1436_Link8_Infinity\04_Scenes\Shots\main-sh010\Rendering\3dRender\shot_main-sh010_mod_Modeling_v0052__pru_\shot_main-sh010_mod_Modeling_v0052__pru_0048.exr
+ 
+[ 04 ] +++ v0055 +++
+ 
+a. enable: Use 16 bits floats
+b. by default
+c. bits per channel: 16bits
+ 
+File Size: 21,5MB
+Render Time: 01:34
+ 
+V:\1436_Link8_Infinity\04_Scenes\Shots\main-sh010\Rendering\3dRender\shot_main-sh010_mod_Modeling_v0055__pru_\png
+ 
+---
+ 
+Summary:
+Difference between file sizes in tests [ 01 ] and [ 04 ] - 88,8% !!!
+01:03 rendr time
+ 
+---
+ 
+David's feedback:
+52 32bit, (70MB) to nie ACES, transform wypalony w beauty, AOV zepsute
+55 16bit, (21MB) to nie ACES, transform wypalony w beauty, AOV zepsute
+56 32bit, (192MB) ACES zepsute beauty ale L-lightgroupa dobra i dziala zamiast rgb, bez ACES beauty dobre- stad moj wniosek ze beauty jest z transformem a AOV acesowe
+ 
+---
+ 
+[ 05 ] +++ v0055 +++
+ 
+a. enable: Use 16 bits floats
+b. by default
+c. by default
+ 
+File Size: 43,6MB
+Render Time: 01:08
+ 
+V:\1436_Link8_Infinity\04_Scenes\Shots\main-sh010\Rendering\3dRender\shot_main-sh010_mod_Modeling_v0061__pru_\shot_main-sh010_mod_Modeling_v0061__pru_0048.exr
+ 
+---
+ 
+Final Summary:
+ 
+Difference between file sizes in tests [ 01 ] and [ 05 ] - 77,6% !!!
+
+[14:39] Piotr Rudkowski
+tutaj podsumowanie
+
+-------------
+ustawic AOV na 32 bit, zapis EXR na 16 bit i odkliknac fiszke z USE 16 bit
