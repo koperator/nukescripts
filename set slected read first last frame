@@ -1,0 +1,14 @@
+import nuke
+
+# Define the first and last frame
+first_frame = 1
+last_frame = 100
+
+# Get a list of selected Read nodes in the current script
+selected_nodes = nuke.selectedNodes()
+
+# Loop through the selected nodes and set the first and last frame for Read nodes
+for node in selected_nodes:
+    if node.Class() == "Read":
+        node['first'].setValue(first_frame)
+        node['last'].setValue(last_frame)
