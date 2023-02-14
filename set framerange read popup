@@ -1,0 +1,17 @@
+import nuke
+
+# Create a custom panel to get the first and last frames
+p = nuke.Panel("Set Frame Range")
+p.addSingleLineInput("First Frame:", str(nuke.root().firstFrame()))
+p.addSingleLineInput("Last Frame:", str(nuke.root().lastFrame()))
+result = p.show()
+if result:
+    first_frame, last_frame = int(p.value("First Frame:")), int(p.value("Last Frame:"))
+
+    # Get a list of all Read nodes in the current script
+    read_nodes = [node for node in nuke.allNodes() if node.Class() == "Read"]
+
+    # Loop through the Read nodes and set the first and last frame
+    for read_node in read_nodes:
+        read_node['first'].setValue(first_frame)
+        read_node['last'].setValue(last_frame)
