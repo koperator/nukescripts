@@ -1,0 +1,10 @@
+import nuke
+
+# loop through all nodes in the script
+for node in nuke.allNodes():
+
+    # check if the node is a Read node
+    if node.Class() == "Read":
+
+        # set the colorspace to RAW
+        node["colorspace"].setValue("reference")
