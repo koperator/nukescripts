@@ -1,0 +1,34 @@
+import nuke
+
+def shuffle_exr_layers(read_node):
+    # Get all layers in the EXR file
+    layers = [layer for layer in read_node.channels() if layer.split('.')[0] != 'default']
+
+    # Create a unique list of layers
+    unique_layers = list(set([layer.split('.')[0] for layer in layers]))
+
+    # Iterate through the unique layers and create a Shuffle node for each
+    for layer in unique_layers:
+        # Create a Shuffle node
+        shuffle_node = nuke.createNode('Shuffle')
+
+        # Set the Shuffle node's 'in' property to the current layer
+        shuffle_node['in'].setValue(layer)
+
+        # Set the alpha channel to black inside the Shuffle node
+        shuffle_node['black'].setValue(True)
+
+        # Set the label of the Shuffle node to indicate the layer
+        shuffle_node['label'].setValue(layer)
+
+        # Connect the Shuffle node to the Read node
+        shuffle_node.setInput(0, read_node)
+
+# Get the selected Read node
+selected_node = nuke.selectedNode()
+
+# Check if the selected node is a Read node
+if selected_node.Class() == 'Read':
+    shuffle_exr_layers(selected_node)
+else:
+    nuke.message("Please select a Read node.")
