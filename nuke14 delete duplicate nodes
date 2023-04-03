@@ -1,0 +1,28 @@
+import nuke
+
+def delete_duplicate_read_nodes():
+    selected_nodes = nuke.selectedNodes()
+
+    # Get read nodes from selected nodes
+    read_nodes = [node for node in selected_nodes if node.Class() == "Read"]
+
+    # Store file paths and nodes to keep
+    unique_file_paths = set()
+    nodes_to_delete = []
+
+    for read_node in read_nodes:
+        file_path = read_node["file"].value()
+
+        if file_path in unique_file_paths:
+            nodes_to_delete.append(read_node)
+        else:
+            unique_file_paths.add(file_path)
+
+    # Delete duplicate read nodes
+    for node in nodes_to_delete:
+        nuke.delete(node)
+
+    print(f"{len(nodes_to_delete)} duplicate read nodes deleted.")
+
+# Call the function
+delete_duplicate_read_nodes()
