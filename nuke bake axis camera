@@ -1,0 +1,7 @@
+axiscamera = nuke.selectedNodes('Camera2')[0]
+axiscamera['selected'].setValue(0)
+camera = nuke.createNode('Camera2')
+
+camera['useMatrix'].setValue(1)
+for i in xrange(0,16):
+    nuke.animation("%s.matrix.%s" % (camera['name'].value() , i), "generate", (str(nuke.root()['first_frame'].value()), str(nuke.root()['last_frame'].value()), "1", "y", 'parent.%s.world_matrix.%s' % ( axiscamera['name'].value() , i ) ))
