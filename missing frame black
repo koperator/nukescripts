@@ -1,0 +1,7 @@
+import nuke
+
+selected_nodes = nuke.selectedNodes()
+
+for node in selected_nodes:
+    if node.Class() == 'Read':
+        node['on_error'].setValue('black')
