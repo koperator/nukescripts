@@ -1,0 +1,21 @@
+import nuke
+import os
+
+# Collect all Read nodes in the script
+read_nodes = nuke.allNodes(filter='Read')
+
+# Dictionary to keep track of unique file paths
+file_node_dict = {}
+
+for node in read_nodes:
+    # Get the normalized file path
+    file_path = node['file'].value()
+    normalized_path = os.path.normpath(file_path)
+
+    # Check if this file path is already in the dictionary
+    if normalized_path in file_node_dict:
+        # Duplicate found; schedule this node for deletion
+        nuke.delete(node)
+    else:
+        # First occurrence; add it to the dictionary
+        file_node_dict[normalized_path] = node
